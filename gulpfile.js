@@ -1,9 +1,12 @@
 'use strict';
 
 // Initialize required packages
+var fs = require('fs');
+var path = require('path');
 var gulp = require('gulp');                       // Our task runner
 var plugins = require('gulp-load-plugins')(       // Auto loads all gulp plugins
-  {rename: {'gulp-clean-css': 'minifycss'}}        // Overwrites the plugin shortname
+  {rename: {'gulp-clean-css': 'minifycss',        // Overwrites the plugin shortname
+            'gulp-html-replace': 'htmlreplace'}}       
 );
 var wiredep = require('wiredep').stream;          // For injection tasks
 var runSequence = require('run-sequence');        // For running tasks/jobs in sequence.
@@ -74,6 +77,22 @@ gulp.task('inject_main', function(cb){
 });
 
 /* ------------
+   Sub Directories  Tasks - These sub tasks are used to inject the subdirectories into the index.html file as a user list
+   ------------ */
+/* Injects a User List of the directories in the App folder
+    This will inject a user list of all the subdirectories in the app folder
+*/
+gulp.task('inject_subdirectories', function(cb){
+   return gulp.src(settings.app_index)
+     .pipe(plugins.htmlreplace({
+       'directory': {
+         'src': getFolders('./app').map(function(folder){return ('<li><a href="/$$">$$</a></li>').replace(/\$\$/g,folder);}).join(''),
+         'tpl': '<ul>%s</ul>'
+       }
+     },{keepBlockTags: true}))
+     .pipe(gulp.dest(settings.app_dir));
+});
+/* ------------
    Compile Tasks - These sub tasks are used to compile various files
    ------------ */
 
@@ -116,6 +135,11 @@ gulp.task('compile_sass', function(cb){
 */
 gulp.task('dist_bundle_files', function(){
   return gulp.src(settings.app_index)
+    .pipe(plugins.htmlreplace({
+      'directory': {
+        'src': getFolders('./app').map(function(folder){return ('<li><a href="/$$">$$</a></li>').replace(/\$\$/g,folder);}).join(''),
+        'tpl': '<ul>%s</ul>'
+      }}))
     .pipe(plugins.useref())
     .pipe(plugins.if('*.js', plugins.uglify()))
     .pipe(plugins.if('*.css', plugins.minifycss()))
@@ -204,5 +228,16 @@ gulp.task('dist_docs', function(cb){
 });
 /* Inject tasks */
 gulp.task('inject', function(cb){
-  runSequence('inject_bower', 'inject_main', cb);
+  runSequence('inject_bower', 'inject_main', 'inject_subdirectories', cb);
 });
+
+/* ------------
+  Helper Functions
+   ------------ */
+function getFolders(dir) {
+  var ignoreFolders = ['bower_components','scripts','styles'];
+  return fs.readdirSync(dir)
+    .filter(function(file) {
+      return (fs.statSync(path.join(dir, file)).isDirectory() && ignoreFolders.indexOf(file) < 0);
+    });
+}
