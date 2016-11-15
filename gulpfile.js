@@ -3,7 +3,7 @@
 // Initialize required packages
 var gulp = require('gulp');                       // Our task runner
 var plugins = require('gulp-load-plugins')(       // Auto loads all gulp plugins
-  {rename: {'gulp-minify-css': 'minifycss'}}        // Overwrites the plugin shortname
+  {rename: {'gulp-clean-css': 'minifycss'}}        // Overwrites the plugin shortname
 );
 var wiredep = require('wiredep').stream;          // For injection tasks
 var runSequence = require('run-sequence');        // For running tasks/jobs in sequence.
@@ -17,8 +17,8 @@ var opn = require('opn');                         // For openeing urls.
 var settings = {
     app_dir: './app',
     app_index: './app/index.html',
-    dist_dir: './dist',
-    dist_index: '.dist/index.html',
+    dist_dir: './docs',
+    dist_index: '.docs/index.html',
     bower_dir: './app/bower_components',
     scripts_dir: './app/scripts',
     scripts_dir_all: './app/scripts/*',
