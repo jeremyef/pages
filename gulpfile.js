@@ -17,6 +17,7 @@ var opn = require('opn');                         // For openeing urls.
 var settings = {
     app_dir: './app',
     app_index: './app/index.html',
+    app_dir_all: ['./app/**','!./app/{bower_components,bower_components/**}','!./app/styles/{sass,sass/**}'],
     dist_dir: './docs',
     dist_index: '.docs/index.html',
     bower_dir: './app/bower_components',
@@ -120,6 +121,11 @@ gulp.task('dist_bundle_files', function(){
     .pipe(plugins.if('*.css', plugins.minifycss()))
     .pipe(gulp.dest(settings.dist_dir));
 });
+gulp.task('dist_bundle_files_subdirs', function(){
+  return gulp.src(settings.app_dir_all)
+    .pipe(plugins.useref())
+    .pipe(gulp.dest(settings.dist_dir));
+});
 /* Copies font directory from bootstrap
     Copies font files from the boostrap directory, as its needed for bootstrap, into the dist directory.
 */
@@ -177,7 +183,7 @@ gulp.task('webserver_reload_sass', ['compile_sass'], function () {
       Will watch the settings.sass_dir for changes and will call the webserver_reload_sass which will compile it then reload the page.
 */
 gulp.task('webserver_watch', function() {
-  gulp.watch([settings.app_index, settings.scripts_dir_all], ['webserver_reload']);
+  gulp.watch([settings.app_index, settings.scripts_dir_all,settings.app_dir_all], ['webserver_reload']);
   gulp.watch([settings.sass_dir_all], ['webserver_reload_sass']);
 })
 
@@ -191,10 +197,10 @@ gulp.task('default', function(cb){
 });
 /* Distribution tasks */
 gulp.task('dist', function(cb){
-  runSequence('dist_bundle_files','dist_copy_fonts','webserver_dist');
+  runSequence('dist_bundle_files','dist_bundle_files_subdirs','dist_copy_fonts','webserver_dist');
 });
 gulp.task('dist_docs', function(cb){
-  runSequence('dist_bundle_files','dist_copy_fonts');
+  runSequence('dist_bundle_files','dist_bundle_files_subdirs','dist_copy_fonts');
 });
 /* Inject tasks */
 gulp.task('inject', function(cb){
