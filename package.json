@@ -1,7 +1,7 @@
 {
-  "name": "web-starter",
+  "name": "Pages",
   "version": "1.0.0",
-  "description": "Web page Starter kit",
+  "description": "Repo to be used for Github pages",
   "scripts": {
     "start": "npm install && bower install && echo \"$(tput bold)Install Complete \r\n$(tput setaf 1)$(tput bold)Run 'gulp default' to start$(tput sgr 0)\""
   },
