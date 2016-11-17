@@ -221,10 +221,10 @@ gulp.task('default', function(cb){
 });
 /* Distribution tasks */
 gulp.task('dist', function(cb){
-  runSequence('dist_bundle_files','dist_bundle_files_subdirs','dist_copy_fonts','webserver_dist');
+  runSequence('inject','dist_bundle_files','dist_bundle_files_subdirs','dist_copy_fonts','webserver_dist');
 });
 gulp.task('dist_docs', function(cb){
-  runSequence('dist_bundle_files','dist_bundle_files_subdirs','dist_copy_fonts');
+  runSequence('inject','dist_bundle_files','dist_bundle_files_subdirs','dist_copy_fonts');
 });
 /* Inject tasks */
 gulp.task('inject', function(cb){
