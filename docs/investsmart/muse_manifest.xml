@@ -1,0 +1,91 @@
+<manifest alg="2" build="2017.0.0.363" opt="true" iceEnabled="true" iceMarkupVersion="2" iceEnabledOptions="link,responsive,cachebuster" exportTarget="other" domain="applandingpage.com" resolutions="1x,2x" timestamp="1479376369415">
+  <folder name="css">
+    <file name="site_global.css" crc="443350757"/>
+    <file name="index.css" crc="193726561" ref="index"/>
+    <file name="nomq_index.css" crc="129579587" ref="index"/>
+  </folder>
+  <folder name="scripts">
+    <file name="jquery-1.8.3.min.js" crc="209076791" ref="index"/>
+    <file name="museutils.js" crc="163421577" ref="index"/>
+    <file name="whatinput.js" crc="86476730" ref="index"/>
+    <file name="museconfig.js" crc="36584860" ref="index"/>
+    <file name="jquery.watch.js" crc="104486786" ref="index"/>
+    <file name="jquery.musepolyfill.bgsize.js" crc="379354253" ref="index"/>
+    <file name="webpro.js" crc="3848665353" ref="index"/>
+    <file name="musewpslideshow.js" crc="4041717617" ref="index"/>
+    <file name="jquery.museoverlay.js" crc="36492500" ref="index"/>
+    <file name="touchswipe.js" crc="404375771" ref="index"/>
+    <file name="jquery.scrolleffects.js" crc="4065090679" ref="index"/>
+    <file name="jquery.museresponsive.js" crc="4146931122" ref="index"/>
+    <file name="require.js" crc="244322403" ref="index"/>
+  </folder>
+  <folder name="images">
+    <file name="shutterstock_427841137-u1329-fr.jpg" crc="4016762249" ref="index"/>
+    <file name="vectors-er-is-ii-icons-v1-02.svg" crc="3806891495" seo="true" ref="index"/>
+    <file name="vectors er is ii icons v1-02_poster_.png" crc="3830675958" ref="index"/>
+    <file name="mobile devices v3.png" crc="41740271" seo="true" ref="index"/>
+    <file name="mobile devices v3_2x.png" crc="3923524627" seo="true" ref="index"/>
+    <file name="android@2x.png" crc="4238879279" seo="true" ref="index"/>
+    <file name="android@2x_2x.png" crc="4151843331" seo="true" ref="index"/>
+    <file name="apple@2x.png" crc="3987097782" seo="true" ref="index"/>
+    <file name="apple@2x_2x.png" crc="529126875" seo="true" ref="index"/>
+    <file name="ellipse 3.png" crc="3904975807" ref="index"/>
+    <file name="ellipse 3_2x.png" crc="3904527932" ref="index"/>
+    <file name="pasted-svg-81575x71.svg" crc="4209864208" seo="true" ref="index"/>
+    <file name="pasted svg 81575x71_poster_.png" crc="3843564969" ref="index"/>
+    <file name="pasted-svg-277252x385.svg" crc="3882927364" seo="true" ref="index"/>
+    <file name="pasted svg 277252x385_poster_.png" crc="3981144354" ref="index"/>
+    <file name="pasted-svg-20801x11.svg" crc="3790389645" seo="true" ref="index"/>
+    <file name="pasted svg 20801x11_poster_.png" crc="3947560501" ref="index"/>
+    <file name="pasted-svg-61142x63.svg" crc="3830906907" seo="true" ref="index"/>
+    <file name="pasted svg 61142x63_poster_.png" crc="3811364414" ref="index"/>
+    <file name="shutterstock_268450019.jpg" crc="442287314" ref="index"/>
+    <file name="shutterstock_268450019_2x.jpg" crc="312314831" ref="index"/>
+    <file name="your portfolio.png" crc="79954008" seo="true" ref="index"/>
+    <file name="your portfolio_2x.png" crc="322741386" seo="true" ref="index"/>
+    <file name="blank.gif" crc="4208392903" ref="index"/>
+    <file name="asx announcement.png" crc="434474561" seo="true" ref="index"/>
+    <file name="asx announcement_2x.png" crc="9172469" seo="true" ref="index"/>
+    <file name="buy hold sell.png" crc="166903329" seo="true" ref="index"/>
+    <file name="buy hold sell_2x.png" crc="4092019168" seo="true" ref="index"/>
+    <file name="loading.gif" crc="3815509949" ref="index"/>
+    <file name="android v2@2x.png" crc="342161966" seo="true" ref="index"/>
+    <file name="android v2@2x_2x.png" crc="3907733911" seo="true" ref="index"/>
+    <file name="apple v2@2x.png" crc="4011690525" seo="true" ref="index"/>
+    <file name="apple v2@2x_2x.png" crc="4268868984" seo="true" ref="index"/>
+    <file name="shutterstock_427841137-u1329-fr2.jpg" crc="3776455435" ref="index"/>
+    <file name="mobile devices v3356x488.png" crc="389039220" seo="true" ref="index"/>
+    <file name="mobile devices v3356x488_2x.png" crc="61224251" seo="true" ref="index"/>
+    <file name="shutterstock_268450019-u3804-fr.jpg" crc="4038873099" ref="index"/>
+    <file name="shutterstock_268450019-u3804-fr_2x.jpg" crc="4138630675" ref="index"/>
+    <file name="shutterstock_427841137-u1329-fr3.jpg" crc="314648505" ref="index"/>
+    <file name="android@2x174x56.png" crc="111356250" seo="true" ref="index"/>
+    <file name="android@2x174x56_2x.png" crc="4151843331" seo="true" ref="index"/>
+    <file name="apple@2x174x56.png" crc="3782748242" seo="true" ref="index"/>
+    <file name="apple@2x174x56_2x.png" crc="529126875" seo="true" ref="index"/>
+    <file name="shutterstock_268450019-u3804-fr2.jpg" crc="4109111667" ref="index"/>
+    <file name="shutterstock_268450019-u3804-fr_2x2.jpg" crc="3937152701" ref="index"/>
+    <file name="android v2@2x173x50.png" crc="3953374253" seo="true" ref="index"/>
+    <file name="android v2@2x173x50_2x.png" crc="3907733911" seo="true" ref="index"/>
+    <file name="apple v2@2x173x50.png" crc="4216901167" seo="true" ref="index"/>
+    <file name="apple v2@2x173x50_2x.png" crc="4268868984" seo="true" ref="index"/>
+    <file name="shutterstock_427841137-u1329-fr4.jpg" crc="257541031" ref="index"/>
+    <file name="android@2x159x52.png" crc="115834912" seo="true" ref="index"/>
+    <file name="android@2x159x52_2x.png" crc="4151843331" seo="true" ref="index"/>
+    <file name="apple@2x159x52.png" crc="475895314" seo="true" ref="index"/>
+    <file name="apple@2x159x52_2x.png" crc="529126875" seo="true" ref="index"/>
+    <file name="android v2@2x159x46.png" crc="121592042" seo="true" ref="index"/>
+    <file name="android v2@2x159x46_2x.png" crc="3907733911" seo="true" ref="index"/>
+    <file name="apple v2@2x159x46.png" crc="8141818" seo="true" ref="index"/>
+    <file name="apple v2@2x159x46_2x.png" crc="4268868984" seo="true" ref="index"/>
+    <file name="android@2x139x45.png" crc="4215878224" seo="true" ref="index"/>
+    <file name="android@2x139x45_2x.png" crc="4151843331" seo="true" ref="index"/>
+    <file name="apple@2x139x45.png" crc="3901035613" seo="true" ref="index"/>
+    <file name="apple@2x139x45_2x.png" crc="529126875" seo="true" ref="index"/>
+    <file name="android v2@2x139x41.png" crc="3769298135" seo="true" ref="index"/>
+    <file name="android v2@2x139x41_2x.png" crc="3907733911" seo="true" ref="index"/>
+    <file name="apple v2@2x139x41.png" crc="3961972556" seo="true" ref="index"/>
+    <file name="apple v2@2x139x41_2x.png" crc="4268868984" seo="true" ref="index"/>
+  </folder>
+  <file name="index.html" crc="4038733404" seo="true" mt="1479375869728" redirect="true"/>
+</manifest>
